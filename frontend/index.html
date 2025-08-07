@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/turkey.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hunting Locations Map</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Où sont les dindons</h1>
+      <div class="container" x-data="$store.globalLocations">
+        <div class="left-column">
+          <div id="locations-list" x-data="locationList">
+            <ul id="list">
+              <template x-for="loc in showedLocs">
+                <li x-test="loc.prettyString()"></li>
+              </template>
+            </ul>
+          </div>
+        </div>
+        <div class="center-column">
+          <div id="map" style="height: 600px; width: 100%"></div>
+        </div>
+        <div class="right-column">
+          <div id="add-location" style="height: 600px; width: 100%"></div>
+          <div id="location-form">
+            <h3>Add New Location</h3>
+            <form id="add-location-form">
+              <input type="number" id="lat" placeholder="Latitude" required />
+              <input type="number" id="lon" placeholder="Longitude" required />
+              <button type="submit">Add Location</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

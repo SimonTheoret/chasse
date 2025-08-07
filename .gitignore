@@ -1,0 +1,8 @@
+/target
+.envrc
+.aider*
+.direnv
+db/database.db
+.env
+database.db
+**/node_modules

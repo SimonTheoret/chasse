@@ -1,0 +1,6 @@
+-- Your SQL goes here
+CREATE TABLE locations (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    lat DOUBLE NOT NULL,
+    lon DOUBLE NOT NULL
+)

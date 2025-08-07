@@ -1,0 +1,9 @@
+<nav>
+  <ul>
+    {% for loc in locations %}
+    <li>
+      {{format!("Lat:{:.6}, Lon:{:.6}", loc.latitude(), loc.longitude())}}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
